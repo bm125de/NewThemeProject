@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+body {
+  height: 200vh;
+}
+
+.ff-fo {
+  font-family: "Fugaz One", "Noto Sans TC", sans-serif;
+}
+
+.ff-as {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+h1 {
+  font-size: 12vh;
+}
+
+h2 {
+  font-size: 10vh;
+}
+
+p {
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fs-i {
+  font-style: italic;
+}
+
+.fs-up {
+  text-transform: uppercase;
+}
+
+.ls-1 {
+  letter-spacing: 10px;
+}
+
+.ls-2 {
+  letter-spacing: 20px;
+}
+
+.ls-3 {
+  letter-spacing: 30px;
+}
+
+.ls-4 {
+  letter-spacing: 40px;
+}
+
+.ls-5 {
+  letter-spacing: 50px;
+}
+
+.ls-6 {
+  letter-spacing: 60px;
+}
+
+.z-1 {
+  z-index: 100;
+}
+
+.z-2 {
+  z-index: 200;
+}
+
+.z-3 {
+  z-index: 300;
+}
+
+.z-4 {
+  z-index: 400;
+}
+
+.z-5 {
+  z-index: 500;
+}
+
+.z-6 {
+  z-index: 600;
+}
+
+.z-7 {
+  z-index: 700;
+}
+
+.z-8 {
+  z-index: 800;
+}
+
+.z-9 {
+  z-index: 900;
+}
+
+.z-10 {
+  z-index: 1000;
+}
+
+.fw-1 {
+  font-weight: 100;
+}
+
+.fw-2 {
+  font-weight: 200;
+}
+
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.fw-9 {
+  font-weight: 900;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.filter.light.filter-left::before {
+  content: '';
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.filter.light.filter-right::before {
+  content: '';
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(270deg, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.filter.light.filter-cover::before {
+  content: '';
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.filter.dark.filter-left::before {
+  content: '';
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.filter.dark.filter-right::before {
+  content: '';
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(270deg, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.filter.dark.filter-cover::before {
+  content: '';
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.btn {
+  font-weight: 700;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.btn:focus {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 10px;
+          box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 10px;
+}
+
+.header.style-1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: burlywood;
+  background-image: url("header-01.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header.style-1.dark {
+  color: white;
+}
+
+.header.style-1.light {
+  color: black;
+}
+
+.header.style-1 .text {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header.style-1 .text h1 {
+  text-transform: uppercase;
+}
+
+.header.style-1 .text h2 {
+  text-transform: uppercase;
+}
+
+.header.style-1 .text h3 {
+  text-transform: uppercase;
+}
+
+.header.style-1 .text h4 {
+  text-transform: uppercase;
+}
+
+.header.style-1 .text h5 {
+  text-transform: uppercase;
+}
+
+.header.style-1 .text h6 {
+  text-transform: uppercase;
+}
+
+.header.style-1 .text p {
+  font-family: "Noto Sans TC", sans-serif;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=style.css.map */

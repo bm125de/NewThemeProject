@@ -1,0 +1,32 @@
+.font {
+    &-w {
+        @for $i from 1 to 10 {
+            &#{$i} {
+                font-weight: $i*100;
+            }
+        }
+    }
+    &-l {
+        @for $i from 1 to 7 {
+            &#{$i} {
+                letter-spacing: $i*10px;
+            }
+        }
+    }
+    &-style {
+        &-i {
+            font-style: italic;
+        }
+        &-up {
+            text-transform: uppercase;
+        }
+    }
+    &-family {
+        &-fo {
+            font-family: $fugaz-one;
+        }
+        &-as {
+            font-family: $auto-sans;
+        }
+    }
+}

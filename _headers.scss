@@ -1,0 +1,73 @@
+@mixin header-style-1_filter($color) {
+    &.filter {
+        &-left {
+            &::before {
+                content: '';
+                top: 0;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(90deg, $color 0%, transparent 100%);
+                ;
+            }
+        }
+        &-right {
+            &::before {
+                content: '';
+                top: 0;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(270deg, $color 0%, transparent 100%);
+                ;
+            }
+        }
+        &-cover {
+            &::before {
+                content: '';
+                top: 0;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: $color;
+                opacity: 0.5;
+                ;
+            }
+        }
+    }
+}
+
+.header {
+    &.style- {
+        &1 {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            &-dark {
+                @extend .style-1;
+                @include header-style-1_filter($color-dark);
+                color: white;
+            }
+            &-light {
+                @extend .style-1;
+                @include header-style-1_filter($color-light);
+                color: black;
+            }
+            .text {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                // left: 5vw; .pos-left-5vw
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                p {
+                    font-family: $auto-sans;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import 'variables';
 body {
     height: 200vh;
 }
@@ -29,17 +30,6 @@ sans-serif;
 $fugaz-one:'Fugaz One',
 'Noto Sans TC',
 sans-serif;
-.ff- {
-    &fo {
-        font-family: $fugaz-one;
-    }
-    &as {
-        font-family: $auto-sans;
-    }
-}
-
-// images
-$images-01: url("header-01.jpeg");
 // z-index
 $z-1:100;
 $z-2:200;
@@ -84,86 +74,26 @@ ul {
     li {}
 }
 
-.fs- {
-    &i {
-        font-style: italic;
-    }
-    &up {
-        text-transform: uppercase;
-    }
-}
-
-@for $i from 1 to 7 {
-    .ls- {
-        &#{$i} {
-            letter-spacing: $i*10px;
-        }
-    }
-}
-
 @for $i from 1 to 11 {
     .z-#{$i} {
         z-index: $i * 100;
     }
 }
 
-@for $i from 1 to 10 {
-    .fw- {
-        &#{$i} {
-            font-weight: $i*100;
+.bg {
+    &-fixed {
+        background-attachment: fixed;
+    }
+    &-center {
+        background-position: center;
+    }
+    &-images {
+        &-01 {
+            background-image: $images-01;
         }
     }
 }
 
-.bg- {
-    &fixed {
-        background-attachment: fixed;
-    }
-    &center {
-        background-position: center;
-    }
-}
-.filter {
-    @mixin filter-cover {
-        content: '';
-        top: 0;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
-    @mixin filter-theme($op1,$op0) {
-            &.filter-{
-                &left {
-                    &::before {
-                        @include filter-cover;
-                        background: linear-gradient(90deg, $op1 0%, $op0 100%);
-                        ;
-                    }
-                }
-                &right {
-                    &::before {
-                        @include filter-cover;
-                        background: linear-gradient(270deg, $op1 0%, $op0 100%);
-                        ;
-                    }
-                }
-                &cover {
-                    &::before {
-                        @include filter-cover;
-                        background-color: $op1;
-                        opacity: 0.5;
-                        ;
-                    }
-                }
-            }
-    }
-    &.light{
-        @include filter-theme(rgb(255, 255, 255), rgba(255, 255, 255, 0));
-    }
-    &.dark{
-        @include filter-theme(rgb(0,0,0), rgba(0, 0, 0, 0));
-    }
-}
 .btn {
     font-weight: 700;
     display: inline-block;
@@ -176,41 +106,7 @@ ul {
         box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 10px;
     }
 }
-// header
-.header {
-    &.style- {
-        &1 {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            background-color: burlywood;
-            background-image: $images-01;
-            background-size: cover;
-            background-position: center;
-            &.dark {
-                color: white;
-            }
-            &.light {
-                color: black;
-            }
-            .text {
-                position: absolute;
-                width: 50%;
-                height: 100%;
-                left: 5vw;
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                @for $i from 1 to 7 {
-                    h#{$i} {
-                        text-transform: uppercase;
-                    }
-                }
-                p {
-                    font-family: $auto-sans;
-                    margin: 10px 0;
-                }
-            }
-        }
-    }
-}
+
+@import '_position';
+@import 'font';
+@import 'headers';

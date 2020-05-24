@@ -1,0 +1,125 @@
+@mixin get-pos($get) {
+    @for $i from 1 to 6 {
+        &-px-#{$i} {
+            #{$get}: $i * 4px;
+        }
+    }
+    @for $i from 1 to 21 {
+        &-v-#{$i} {
+            #{$get}: $i * 4%;
+        }
+    }
+}
+
+@mixin get-two($get1, $get2) {
+    @for $i from 1 to 6 {
+        &-px-#{$i} {
+            #{$get1}: $i * 4px;
+            #{$get2}: $i * 4px;
+        }
+    }
+    @for $i from 1 to 21 {
+        &-v-#{$i} {
+            #{$get1}: $i * 4%;
+            #{$get2}: $i * 4%;
+        }
+    }
+}
+
+.pos {
+    @mixin pos {
+        &-l {
+            @include get-pos(left);
+        }
+        &-r {
+            @include get-pos(right);
+        }
+        &-t {
+            @include get-pos(top);
+        }
+        &-b {
+            @include get-pos(bottom);
+        }
+    }
+    @include pos;
+    @include m_pc {
+        &-pc {
+            @include pos;
+        }
+    }
+    @include m_md {
+        &-md {
+            @include pos;
+        }
+    }
+    @include m_sm {
+        &-sm {
+            @include pos;
+        }
+    }
+}
+
+.mr {
+    @mixin mr {
+        &-t {
+            @include get-pos(margin-top);
+        }
+        &-b {
+            @include get-pos(margin-bottom);
+        }
+        &-l {
+            @include get-pos(margin-left);
+        }
+        &-r {
+            @include get-pos(margin-right);
+        }
+        &-y {
+            @include get-two(margin-bottom, margin-top);
+        }
+        &-x {
+            @include get-two(margin-left, margin-right);
+        }
+    }
+    @include mr;
+    @include m_pc {
+        &-pc {
+            @include mr;
+        }
+    }
+    @include m_md {
+        &-md {
+            @include mr;
+        }
+    }
+    @include m_sm {
+        &-sm {
+            @include mr;
+        }
+    }
+}
+
+.w {
+    @mixin w {
+        @for $i from 1 to 5 {
+            &-#{$i*25} {
+                width: $i * 25%;
+            }
+        }
+    }
+    @include w;
+    @include m_pc {
+        &-pc {
+            @include w;
+        }
+    }
+    @include m_md {
+        &-md {
+            @include w;
+        }
+    }
+    @include m_sm {
+        &-sm {
+            @include w;
+        }
+    }
+}

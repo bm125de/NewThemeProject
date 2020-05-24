@@ -44,7 +44,7 @@
             height: 100vh;
             position: relative;
             background-size: cover;
-            background-position: center;
+            // background-position: center;
             &-dark {
                 @extend .style-1;
                 @include header-style-1_filter($color-dark);
@@ -57,15 +57,14 @@
             }
             .text {
                 position: absolute;
-                width: 50%;
+                // width: 50%;
                 height: 100%;
                 // left: 5vw; .pos-left-5vw
                 display: flex;
                 flex-flow: column;
                 justify-content: center;
                 p {
-                    font-family: $auto-sans;
-                    margin: 10px 0;
+                    // margin: 10px 0;
                 }
             }
         }

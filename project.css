@@ -1,0 +1,162 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 200vh; }
+
+.header-1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("EYosxWXU0AcC354.jpg");
+  background-size: cover;
+  background-position: center; }
+  .header-1::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+  .header-1.fixed {
+    background-attachment: fixed; }
+  .header-1 .text {
+    height: 90%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media screen and (min-width: 1281px) {
+      .header-1 .text {
+        width: 50%; } }
+    @media screen and (max-width: 1280px) and (min-width: 721px) {
+      .header-1 .text {
+        width: 80%; } }
+    @media screen and (max-width: 721px) {
+      .header-1 .text {
+        width: 90%; } }
+    .header-1 .text * {
+      -webkit-transition: .4s;
+      transition: .4s; }
+    @media screen and (min-width: 1281px) {
+      .header-1 .text h1 {
+        font-size: 130px; } }
+    @media screen and (max-width: 1280px) and (min-width: 721px) {
+      .header-1 .text h1 {
+        font-size: 100px; } }
+    @media screen and (max-width: 721px) {
+      .header-1 .text h1 {
+        font-size: 82px; } }
+    @media screen and (min-width: 1281px) {
+      .header-1 .text h2 {
+        font-size: 110px; } }
+    @media screen and (max-width: 1280px) and (min-width: 721px) {
+      .header-1 .text h2 {
+        font-size: 85px; } }
+    @media screen and (max-width: 721px) {
+      .header-1 .text h2 {
+        font-size: 70px; } }
+    @media screen and (min-width: 1281px) {
+      .header-1 .text h3 {
+        font-size: 90px; } }
+    @media screen and (max-width: 1280px) and (min-width: 721px) {
+      .header-1 .text h3 {
+        font-size: 70px; } }
+    @media screen and (max-width: 721px) {
+      .header-1 .text h3 {
+        font-size: 58px; } }
+    @media screen and (min-width: 1281px) {
+      .header-1 .text h4 {
+        font-size: 70px; } }
+    @media screen and (max-width: 1280px) and (min-width: 721px) {
+      .header-1 .text h4 {
+        font-size: 55px; } }
+    @media screen and (max-width: 721px) {
+      .header-1 .text h4 {
+        font-size: 46px; } }
+    @media screen and (min-width: 1281px) {
+      .header-1 .text h5 {
+        font-size: 50px; } }
+    @media screen and (max-width: 1280px) and (min-width: 721px) {
+      .header-1 .text h5 {
+        font-size: 40px; } }
+    @media screen and (max-width: 721px) {
+      .header-1 .text h5 {
+        font-size: 34px; } }
+    @media screen and (min-width: 1281px) {
+      .header-1 .text h6 {
+        font-size: 30px; } }
+    @media screen and (max-width: 1280px) and (min-width: 721px) {
+      .header-1 .text h6 {
+        font-size: 25px; } }
+    @media screen and (max-width: 721px) {
+      .header-1 .text h6 {
+        font-size: 22px; } }
+    .header-1 .text p {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      @media screen and (min-width: 1281px) {
+        .header-1 .text p {
+          font-size: 30px; } }
+      @media screen and (max-width: 1280px) and (min-width: 721px) {
+        .header-1 .text p {
+          font-size: 25px; } }
+      @media screen and (max-width: 721px) {
+        .header-1 .text p {
+          font-size: 20px; } }
+    .header-1 .text a {
+      font-size: 20px;
+      display: inline-block;
+      margin: 0 20px; }
+      .header-1 .text a:first-child {
+        margin-left: 0; }
+  .header-1.dark {
+    color: white; }
+    .header-1.dark::before {
+      background: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0)));
+      background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0) 100%); }
+    .header-1.dark a {
+      color: white; }
+  .header-1.light {
+    color: black; }
+    .header-1.light::before {
+      background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+      background: linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%); }
+    .header-1.light a {
+      color: black; }
+
+h1 {
+  margin: 0; }
+
+h2 {
+  margin: 0; }
+
+h3 {
+  margin: 0; }
+
+h4 {
+  margin: 0; }
+
+h5 {
+  margin: 0; }
+
+h6 {
+  margin: 0; }
+
+p {
+  margin: 0; }
+/*# sourceMappingURL=project.css.map */

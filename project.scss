@@ -1,0 +1,160 @@
+// 變數
+$test-images: url("EYosxWXU0AcC354.jpg");
+// 函數
+// @mixin m-pc-max {
+//     @media screen and (max-width: 1921px) {
+//         @content;
+//     }
+// }
+@mixin m-pc-min {
+    @media screen and (min-width: 1281px) {
+        @content;
+    }
+}
+
+@mixin m-pad {
+    @media screen and (max-width: 1280px) and (min-width: 721px) {
+        @content;
+    }
+}
+
+@mixin m-phone-max {
+    @media screen and (max-width: 721px) {
+        @content;
+    }
+}
+
+// @mixin m-phone-min {
+//     @media screen and (max-width: 480px) {
+//         @content;
+//     }
+// }
+// 絕對樣式
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 200vh;
+}
+
+.header {
+    &-1 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-image: $test-images;
+        background-size: cover;
+        background-position: center;
+        &::before {
+            content: '';
+            // Size
+            width: 100%;
+            height: 100%;
+            // Position
+            position: absolute;
+        }
+        &.fixed {
+            background-attachment: fixed;
+        }
+        .text {
+            // Size
+            height: 90%;
+            @include m-pc-min() {
+                width: 50%;
+            }
+            @include m-pad() {
+                width: 80%;
+            }
+            @include m-phone-max() {
+                width: 90%;
+            }
+            // Position
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 8%;
+            margin-top: auto;
+            margin-bottom: auto;
+            // Flex
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            // Style
+            * {
+                transition: .4s;
+            }
+            @for $i from 1 to 7 {
+                h#{$i} {
+                    @include m-pc-min() {
+                        font-size: (7-$i) * 20px + 10px; // Rule: 22 x1 + base 10
+                    }
+                    @include m-pad() {
+                        font-size: (7-$i) * 15px + 10px;
+                    }
+                    @include m-phone-max() {
+                        font-size: (7-$i) * 12px + 10px;
+                    }
+                }
+            }
+            p {
+                @include m-pc-min() {
+                    font-size: 30px;
+                }
+                @include m-pad() {
+                    font-size: 25px;
+                }
+                @include m-phone-max() {
+                    font-size: 20px;
+                }
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            a {
+                font-size: 20px;
+                display: inline-block;
+                margin: 0 20px;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        &.dark {
+            // Dark Mode
+            // Style
+            color: white;
+            &::before {
+                // Style
+                background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            }
+            a {
+                color: white;
+            }
+        }
+        &.light {
+            // Light Mode
+            // Style
+            color: black;
+            &::before {
+                // Style
+                background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+            }
+            a {
+                color: black;
+            }
+        }
+    }
+}
+
+// 相對樣式
+@for $i from 1 to 7 {
+    h#{$i} {
+        margin: 0;
+        // font-size: (7-$i) * 20px + 10px;
+    }
+}
+
+p {
+    margin: 0;
+}

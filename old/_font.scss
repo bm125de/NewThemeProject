@@ -1,15 +1,22 @@
 .font {
     &-w {
         @for $i from 1 to 10 {
-            &#{$i} {
+            &-#{$i} {
                 font-weight: $i*100;
             }
         }
     }
     &-l {
         @for $i from 1 to 7 {
-            &#{$i} {
-                letter-spacing: $i*10px;
+            &-#{$i} {
+                letter-spacing: $i*4px;
+            }
+        }
+    }
+    &-s {
+        @for $i from 1 to 11 {
+            &-#{$i} {
+                font-size: (10-$i)*4px + 8px;
             }
         }
     }
